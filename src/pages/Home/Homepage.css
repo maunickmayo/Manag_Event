@@ -1,0 +1,15 @@
+/* 
+ background-image: url('/public/HomePage.jpg');
+  background-image: url('HomePage.jpg');
+  background-image: url('/HomePage.jpg');
+*/
+
+.homepage {
+    background-image: url('/src/assets/homepage.jpg');
+    height:100vh;
+    background-repeat: no-repeat;
+    width:100%;
+    background-size: cover;
+    background-position: bottom;   
+    background-attachment: fixed;
+}
