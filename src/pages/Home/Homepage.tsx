@@ -21,7 +21,7 @@ export default function Homepage() {
                    
                 </div>
                 <div className="mt-10">
-                    <div className="w-4/12  md:w-3/12 md:lg:w-3/12 lg:mx-auto xl:w-2/12  mt-10 mx-auto">
+                    <div className="w-5/12  md:w-4/12 md:lg:w-3/12 lg:mx-auto xl:w-2/12  mt-10 mx-auto">
                         <Link to={'/taskslist'}>
                             <ButtonDefault>Commencer</ButtonDefault>
                         </Link>
