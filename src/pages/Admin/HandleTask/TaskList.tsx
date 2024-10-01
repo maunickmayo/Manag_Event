@@ -6,6 +6,8 @@ import ModalCreateTask from "./ModalCreateTask";
 import ModalUpdateTask from "./ModalUpdateTask";
 import ModalConfirmDeleteOne from "./ModalConfirmDeleteOne";
 import { Link } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
+
 //import { useLocation } from "react-router-dom";
 export interface Task {
     id: string,
@@ -85,14 +87,17 @@ export default function TaskList() {
 
     return (
         <>
-              <Link  className="hover:text-lightBlueDP hidden md:flex md:gap-2 text-orangeDP  mt-20 ms-3"
+            <div className="py-10 ms-3 ">
+                <Link className="hover:text-lightBlueDP text-orangeDP flex place-items-center gap-1"
                 to={'/'}
-            >
-                <span>Retour à la page d'accueil </span>
+                >
+                <FaArrowLeft className="text-orangeDP"/>  
+                    <span className="hover:text-lightBlueDP text-orangeDP">Retour à la page d'accueil</span> 
+                    </Link>
+            </div>
+           
 
-            </Link>
-
-            <h2 className=" font-bold text-center text-md mt-10">Liste des taches :</h2>
+            <h2 className="font-bold text-center text-md mt-10">Liste des taches :</h2>
 
             {/*----------BARRE DE RECHERCHE A  REVOIR CAR PAS ENCORE IMPLEMENTE CORRECTEMENT-
                  <div className=" flex justify-center  rounded-md mt-5 mb-5 relative">
