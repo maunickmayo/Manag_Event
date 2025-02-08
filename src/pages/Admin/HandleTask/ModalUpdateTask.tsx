@@ -20,8 +20,6 @@ const dataSchema = yup.object({
     description: yup.string().required("Ce champ est obligatoire").min(1, "1 caractère minimum"),
 })
 
-//const ModalUpdateTask: React.FC<ModalUpdateTaskProps> = ({ defaultValues, onSubmit, isModalUpdateOpen, openModalUpdate, closeModalUpdate })
-
 export default function ModalUpdateTask({ defaultValues, onSubmit, isModalUpdateOpen, openModalUpdate, closeModalUpdate }: ModalUpdateTaskProps) {
 
     const { register, handleSubmit, formState: { errors } } = useForm<Task>({
