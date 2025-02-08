@@ -11,7 +11,7 @@ import * as yup from "yup";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Task } from "./TaskList";
 import { v4 as uuidv4 } from 'uuid';
-import { memo } from "react"; // Lets you skip re-rendering a component when its props are unchanged.
+import { memo } from "react"; 
 
 const taskSchema = yup.object({
     nom: yup.string().required("Ce champ est obligatoire").min(1, "1 caractère minimum"),
@@ -37,8 +37,8 @@ export default memo<PropsTaskList>(function ModalCreateTask(props: PropsTaskList
 
     const onSubmit: SubmitHandler<TaskFormData> = data => {
         const newTask = {
-            id: uuidv4(),// ou crypto.randomUUID(),  console.log(typeof uuidv4())
-            ...data // nom: data.nom, description: data.description
+            id: uuidv4(),
+            ...data
         }
         setTasks([newTask, ...tasks]);
         reset()
@@ -89,4 +89,3 @@ export default memo<PropsTaskList>(function ModalCreateTask(props: PropsTaskList
         </>
     )
 })
-// sans destructuring des props on sera obligé de faire  props.handleOpen, props.open, props.tasks, props.setTasks 
