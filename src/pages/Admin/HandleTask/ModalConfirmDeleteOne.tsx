@@ -1,5 +1,5 @@
 import { Dialog, DialogBody, DialogFooter, DialogHeader } from "@material-tailwind/react";
-import ButtonDefault from "../../../components/ButtonDefault"; // Vous pouvez utiliser n'importe quel composant de bouton.
+import ButtonDefault from "../../../components/ButtonDefault"; 
 
 interface ModalConfirmDeleteProps {
     task: { nom: string };
