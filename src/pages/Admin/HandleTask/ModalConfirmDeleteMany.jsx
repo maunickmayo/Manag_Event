@@ -5,42 +5,20 @@ import ModalCreateTask from "./ModalCreateTask";
 import ModalUpdateTask from "./ModalUpdateTask";
 import ModalConfirmDeleteOne from "./ModalConfirmDeleteOne";
 
-//export interface Task {
-    id: string;
-    nom: string;
-    description: string;
-//}
-
 export default function TaskList() {
 
-  /*  const [tasks, setTasks] = useState<Task[]>([
-        {
-            id: crypto.randomUUID(),
-            nom: "Buvette",
-            description: "Entretien de la buvette",
-        },
-        {
-            id: crypto.randomUUID(),
-            nom: "Accueil",
-            description: "Accueillir et orienter les visiteurs",
-        },
-    ]);  */
-
-   // const [selectedTasks, setSelectedTasks] = useState<string[]>([]);
     const [open, setOpen] = useState<boolean>(false);
     const [isModalUpdateOpen, setIsModalUpdateOpen] = useState<boolean>(false);
     const [isModalConfirmOpen, setIsModalConfirmOpen] = useState<boolean>(false);
     const [selectedTask, setSelectedTask] = useState<Task | null>(null);
 
-    // Nouvel état pour stocker la recherche
+
     const [searchQuery, setSearchQuery] = useState<string>("");
 
    // const handleOpen = (): void => {
         setOpen(!open);
     };
 
-    // Handle task update
-  //  function handleUpdateTask(updatedTask: Task): void {
         setTasks(tasks.map(task => task.id === updatedTask.id ? updatedTask : task));
         setIsModalUpdateOpen(false);
    // }
